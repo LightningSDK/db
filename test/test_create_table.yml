@@ -1,0 +1,23 @@
+---
+tables:
+  blog:
+    columns:
+      id:
+        type: SERIAL PRIMARY KEY
+      created_at:
+        type: timestamp
+      header_image:
+        type: integer
+      slug:
+        type: varchar(255)
+        notnull: true
+      keywords:
+        type: varchar(255)
+      body:
+        type: text
+    indexes:
+      slug:
+        columns:
+          slug:
+            direction: ASC
+            unique: true
